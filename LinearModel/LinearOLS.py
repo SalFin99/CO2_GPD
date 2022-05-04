@@ -1,4 +1,4 @@
-from LinearModel.LoadData import *
+from LoadData import *
 
 co2_TperCap = loadDataCO2()
 GDP_perCap = loadDataGDP()
