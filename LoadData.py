@@ -9,6 +9,12 @@ def loadDataGDP():
 
     return GDP_perCap
 
+def getGDP():
+    df=pd.read_csv("/Users/salvatorefinizio/github/dataSets/data_portugal.csv", index_col=0, delimiter=";", decimal=",") #load the csv file ("note: remember the limiter next time")
+
+    GDP_perCap=df.GDP_perCap #regressor
+    return GDP_perCap
+
 def loadDataCO2():
     df=pd.read_csv("/Users/salvatorefinizio/github/dataSets/data_portugal.csv", index_col=0, delimiter=";", decimal=",") #load the csv file ("note: remember the limiter next time")
 
