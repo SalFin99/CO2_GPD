@@ -26,4 +26,6 @@ Requests and future development of this python project:
 
 - Can I improve one of the models? 
 
+ Soon you will find the interpretation of all the regressions, the econometric meaning of the performed tests and a general explanation of this quantitative analysis
+
 :)
