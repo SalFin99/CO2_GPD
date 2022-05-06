@@ -3,7 +3,7 @@
 Hi! For my applied econometrics class I am working on time-series data, studying the relation between CO2 emissions and GDP per capita in Portugal and trying to assess if the Cuznek Curve is present and which model best suits the data.
 The project employs Gretl, but I am personally replicating it in Python. 
 
-Requests and future development of this python project:
+On going developments of this python project:
 
 - Summary statistics
 
