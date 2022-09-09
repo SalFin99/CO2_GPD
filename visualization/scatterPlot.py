@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import pandas as pd
+
 from LoadData import *
 
 co2_TperCap = loadDataCO2()
