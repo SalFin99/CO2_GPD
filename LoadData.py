@@ -1,9 +1,13 @@
 import pandas as pd
 import numpy as np
-import statsmodels.api as sm
+
+def loadAll():
+    df=pd.read_csv("/Users/salvatorefinizio/github/dataSets/data_portugal.csv", index_col=0, delimiter=";", decimal=",") #load the csv file ("note: remember the limiter next time")
+    print(df)
+    return df
 
 def loadDataGDP():
-    df=pd.read_csv("/Users/salvatorefinizio/github/dataSets/data_portugal.csv", index_col='Year', delimiter=";", decimal=",") #load the csv file ("note: remember the limiter next time")
+    df=pd.read_csv("/Users/salvatorefinizio/github/dataSets/data_portugal.csv", index_col=0, delimiter=";", decimal=",") #load the csv file ("note: remember the limiter next time")
     df=df.drop(['Annual_CO2_emissions_TperCap'], axis=1)  #column dropped because it is useless to load everything, everytime.
     df['logGDP_perCap'] = np.log(df['GDP_perCap'])
     df['logDiffGDP_perCap'] = np.log(1+df.GDP_perCap.pct_change())
