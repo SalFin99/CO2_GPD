@@ -1,4 +1,6 @@
-# CO2 emissions per capita vs GDP per capita: The case of Portugal Hi! My applied econometrics exam of the last semester consisted in a time series analysis of the relation between CO2 emisssions and GDP per capita, trying to assess if the Cuznek Curve is present and which model best suits the data. The guidelines of the project required Gretl, but I am  now personally replicating it in Python. Requests and future development of this python project:
+# CO2 emissions per capita vs GDP per capita: The case of Portugal
+
+Hi! My applied econometrics exam of the last semester consisted in a time series analysis of the relation between CO2 emisssions and GDP per capita, trying to assess if the Cuznek Curve is present and which model best suits the data. The guidelines of the project required Gretl, but I am  now personally replicating it in Python. Requests and future development of this python project:
 
 - Summary statistics & visualizations:
 
@@ -29,7 +31,7 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
   - Heteroskedasticity
   - Autocorrelation tests
   - Mispecification tests
-   
+
 - Time-series models:
   - AR
   - MA
