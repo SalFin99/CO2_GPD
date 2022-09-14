@@ -19,7 +19,8 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 <img width="454" alt="Screenshot 2022-09-10 at 14 56 15" src="https://user-images.githubusercontent.com/103948003/189484401-8f7e2191-419a-4d50-8f45-612eb002b101.png">
 
 - Regressions:
-  - Linear model
+  - Linear model:
+    
   - Nonlinear model
   - Logarithmic model
   - First-difference model
