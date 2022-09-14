@@ -2,8 +2,10 @@ import pandas as pd
 import numpy as np
 
 def loadAll():
-    df=pd.read_csv("/Users/salvatorefinizio/github/dataSets/data_portugal.csv", index_col=0, delimiter=";", decimal=",") #load the csv file ("note: remember the limiter next time")
-    print(df)
+    df=pd.read_csv("/Users/salvatorefinizio/github/dataSets/data_portugal.csv", parse_dates=['Year'], index_col=['Year'] ,delimiter=";", decimal=",") #load the csv file ("note: remember the limiter next time")
+    df.index = pd.to_datetime(df.index, format = '%Y/%m/%d').strftime('%Y')
+    df.index.name=None
+
     return df
 
 def loadDataGDP():
