@@ -11,7 +11,7 @@ fig, ax = plt.subplots(2,3, figsize= (20,15))
 fig.tight_layout()
 #fig.set_size_inches(100, 65)
 
-fig.subplots_adjust(hspace=0.500, wspace=0.2400)
+fig.subplots_adjust(left=0.125, right=0.9, bottom=0.1, top=0.9, hspace=0.2, wspace=0.2)
 
 ax[0][0].tick_params(labelrotation = 15)
 sns.lineplot(x='Year', y='Annual_CO2_emissions_TperCap', data=co2_data, ax=ax[0][0])
@@ -37,7 +37,6 @@ fig.tight_layout()  # otherwise the right y-label is slightly clipped
 
 sns.lineplot(x='Year', y='GDP_perCap', data=GDP_data, ax=ax2,color='red')
 sns.lineplot(x='Year', y='Annual_CO2_emissions_TperCap', data=co2_data, ax=ax1, color='green')
-
 
 
 plt.show()
