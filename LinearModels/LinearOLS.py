@@ -1,4 +1,5 @@
 from LoadData import *
+
 import statsmodels.api as sm
 
 co2_TperCap = loadDataCO2()
