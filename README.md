@@ -79,6 +79,10 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
         Notes:
         [1] Standard Errors are heteroscedasticity robust (HC3)
 
+        This adjusted model has an optimal adjusted R-squared value of more than 99%, indicating a stronger explanatory capacity compared to the previous model, and a p-value of the F test which is zero. In this case, the coefficient for GDP per capita is extremely low
+
+
+
   - Nonlinear model
 
                                     OLS Regression Results                                 
@@ -111,10 +115,14 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
         Notes:
         [1] Standard Errors are heteroscedasticity robust (HC3)
 
+        This model has a very good adjusted R squared value of more than 99%,  also the squared GDP variable is now significant and some of tests can be accepted. Indeed, autocorrelation is not present anymore and we have stability in the parameters’ coefficient
+
 
   - Logarithmic model
 
-          OLS Regression Results                            
+        To adjust this model, we robustified our standard errors and we introduced three significant dummies (1872, 1874, 1878) and a lag of the dependent variable. The dummies can be explained mentioning the golpe of Saldanha Oliveira, in 1870, which was followed by a period of major political turmoil and financial difficulties
+
+        OLS Regression Results                            
         ==============================================================================
         Dep. Variable:                 logCO2   R-squared:                       0.990
         Model:                            OLS   Adj. R-squared:                  0.989
@@ -143,6 +151,9 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
         Notes:
         [1] Standard Errors are heteroscedasticity robust (HC3)
+
+        As we can assess by looking at the coefficients, an increase of one percent in GDP per capita produces a 0.184% increase in CO2 emissions per capita. The dummies are all significant, showing a larger positive impact for the year 1872 and negative impacts for 1874 and 1877. The adjusted R-squared and F-tests confirms that the model is well performing.
+
 
   - First-difference model
 
@@ -175,6 +186,10 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
         Notes:
         [1] Standard Errors are heteroscedasticity robust (HC3)
+
+        We have to note that the first lag of the dependent variable is not significant, but when included it concurs to correct autocorrelation and to get stable coefficients.
+        The interpretation of this model suggest that a 1% increase in the growth rate of GDP per capita produces a 1.03% increase in the growth rate of CO2 emissions per capita. The adjusted R-square is not particularly high, as it is not able to explain approximately 62% of variation in the growth rate of CO2 emissions per capita.
+
 
 
 
