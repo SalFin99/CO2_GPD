@@ -24,7 +24,7 @@ x.loc['2003', 'dummy2003']=1
 x=sm.add_constant(x)
 
 
-reg_ols = sm.OLS(y, x.astype(float), missing='drop').fit(cov_type='HC')
+reg_ols = sm.OLS(y, x.astype(float), missing='drop').fit(cov_type='HC3')
 
 
 print(reg_ols.summary())
