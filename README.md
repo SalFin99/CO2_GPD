@@ -76,7 +76,9 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
         Kurtosis:                       7.496   Cond. No.                     2.12e+05
         ==============================================================================
 
-
+        Notes:
+        [1] Standard Errors are heteroscedasticity robust (HC3)
+        
   - Nonlinear model
   - Logarithmic model
   - First-difference model
