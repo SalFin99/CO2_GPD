@@ -9,7 +9,7 @@ data = loadAll() #just returns the database
 data['GDP_lag1'] = data['GDP_perCap'].shift(1) #lag column for GDP variable
 data['CO2_lag1'] = data['Annual_CO2_emissions_TperCap'].shift(1) #lag column for co2 variable
 
-y=data[['Annual_CO2_emissions_TperCap']] #independet variable
+y=data[['Annual_CO2_emissions_TperCap']] #dependent variable
 
 x=data[['GDP_perCap', 'GDP_lag1', 'CO2_lag1']] #regressors
 

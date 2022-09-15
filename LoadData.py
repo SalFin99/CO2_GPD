@@ -11,6 +11,7 @@ def loadAll():
 def loadDataGDP():
     df=pd.read_csv("/Users/salvatorefinizio/github/dataSets/data_portugal.csv", index_col=0, delimiter=";", decimal=",") #load the csv file ("note: remember the limiter next time")
     df=df.drop(['Annual_CO2_emissions_TperCap'], axis=1)  #column dropped because it is useless to load everything, everytime.
+    df['sqGDP_percap'] = np.square(df['GDP_perCap'])
     df['logGDP_perCap'] = np.log(df['GDP_perCap'])
     df['logDiffGDP_perCap'] = np.log(1+df.GDP_perCap.pct_change())
 
