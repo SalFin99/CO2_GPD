@@ -1,6 +1,6 @@
 # CO2 emissions per capita vs GDP per capita: The case of Portugal
 
-Hi! My applied econometrics exam of the last semester consisted in a time series analysis of the relation between CO2 emisssions and GDP per capita, trying to assess if the Cuznek Curve is present and which model best suits the data. The guidelines of the project required Gretl, but I am  now personally replicating it in Python. Requests and future development of this python project:
+Hi! My applied econometrics exam of the last semester consisted in a time series analysis of the relation between CO2 emisssions and GDP per capita, trying to assess if the Cuznek Curve is present and which model best suits the data. The guidelines of the project required Gretl, but I am now personally writing some part of it in Python. As the assessment of the best model for every functional form has already been carried out, i will only code the models which were choosen for every form.
 
 - Summary statistics & visualizations:
 
@@ -20,7 +20,35 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
 - Regressions:
   - Linear model:
-    
+  
+                                          OLS Regression Results                                 
+        ========================================================================================
+        Dep. Variable:     Annual_CO2_emissions_TperCap   R-squared:                       0.995
+        Model:                                      OLS   Adj. R-squared:                  0.995
+        Method:                           Least Squares   F-statistic:                     168.3
+        Date:                          Thu, 15 Sep 2022   Prob (F-statistic):           7.84e-53
+        Time:                                  16:14:48   Log-Likelihood:                 78.918
+        No. Observations:                           148   AIC:                            -145.8
+        Df Residuals:                               142   BIC:                            -127.9
+        Df Model:                                     5                                         
+        Covariance Type:                            HC0                                         
+        ==============================================================================
+        coef    std err          z      P>|z|      [0.025      0.975]
+        ------------------------------------------------------------------------------
+        const          0.0126      0.014      0.916      0.359      -0.014       0.040
+        GDP_perCap     0.0002   4.46e-05      4.797      0.000       0.000       0.000
+        GDP_lag1      -0.0002    4.3e-05     -4.966      0.000      -0.000      -0.000
+        CO2_lag1       0.9885      0.065     15.164      0.000       0.861       1.116
+        dummy1989      0.6851      0.049     14.005      0.000       0.589       0.781
+        dummy2003     -0.4138      0.104     -3.988      0.000      -0.617      -0.210
+        ==============================================================================
+        Omnibus:                       22.190   Durbin-Watson:                   2.120
+        Prob(Omnibus):                  0.000   Jarque-Bera (JB):              124.734
+        Skew:                           0.047   Prob(JB):                     8.21e-28
+        Kurtosis:                       7.496   Cond. No.                     2.12e+05
+        ==============================================================================
+
+
   - Nonlinear model
   - Logarithmic model
   - First-difference model
