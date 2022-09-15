@@ -78,16 +78,106 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
         Notes:
         [1] Standard Errors are heteroscedasticity robust (HC3)
-        
-  - Nonlinear model
-  - Logarithmic model
-  - First-difference model
-  - Quantile regression
 
-- Diagnostic tests:
-  - Heteroskedasticity
-  - Autocorrelation tests
-  - Mispecification tests
+  - Nonlinear model
+
+                                    OLS Regression Results                                 
+        ========================================================================================
+        Dep. Variable:     Annual_CO2_emissions_TperCap   R-squared:                       0.995
+        Model:                                      OLS   Adj. R-squared:                  0.995
+        Method:                           Least Squares   F-statistic:                     55.93
+        Date:                          Thu, 15 Sep 2022   Prob (F-statistic):           6.24e-24
+        Time:                                  20:25:12   Log-Likelihood:                 80.623
+        No. Observations:                           148   AIC:                            -149.2
+        Df Residuals:                               142   BIC:                            -131.3
+        Df Model:                                     5                                         
+        Covariance Type:                            HC3                                         
+        ================================================================================
+        coef    std err          z      P>|z|      [0.025      0.975]
+        --------------------------------------------------------------------------------
+        const           -0.0566      0.019     -3.007      0.003      -0.094      -0.020
+        GDP_perCap    4.384e-05   1.54e-05      2.844      0.004    1.36e-05     7.4e-05
+        sqGDP_percap -1.104e-09   3.74e-10     -2.953      0.003   -1.84e-09   -3.71e-10
+        CO2_lag1         0.9297      0.072     12.954      0.000       0.789       1.070
+        dummy1989        0.7024     36.175      0.019      0.985     -70.199      71.604
+        dummy1999        0.7598    639.439      0.001      0.999   -1252.518    1254.037
+        ==============================================================================
+        Omnibus:                       28.157   Durbin-Watson:                   2.220
+        Prob(Omnibus):                  0.000   Jarque-Bera (JB):               73.132
+        Skew:                           0.736   Prob(JB):                     1.32e-16
+        Kurtosis:                       6.113   Cond. No.                     3.13e+09
+        ==============================================================================
+
+        Notes:
+        [1] Standard Errors are heteroscedasticity robust (HC3)
+
+
+  - Logarithmic model
+
+          OLS Regression Results                            
+        ==============================================================================
+        Dep. Variable:                 logCO2   R-squared:                       0.990
+        Model:                            OLS   Adj. R-squared:                  0.989
+        Method:                 Least Squares   F-statistic:                     2512.
+        Date:                Thu, 15 Sep 2022   Prob (F-statistic):          1.25e-136
+        Time:                        20:41:30   Log-Likelihood:                 101.20
+        No. Observations:                 148   AIC:                            -190.4
+        Df Residuals:                     142   BIC:                            -172.4
+        Df Model:                           5                                         
+        Covariance Type:                  HC3                                         
+        =================================================================================
+        coef    std err          z      P>|z|      [0.025      0.975]
+        ---------------------------------------------------------------------------------
+        const            -1.5388      1.046     -1.471      0.141      -3.589       0.512
+        logGDP_perCap     0.1840      0.123      1.497      0.134      -0.057       0.425
+        lag_logCO2        0.8259      0.114      7.257      0.000       0.603       1.049
+        dummy1872         2.0077      1.221      1.645      0.100      -0.385       4.400
+        dummy1874        -0.4435      3.112     -0.143      0.887      -6.543       5.655
+        dummy1877        -0.5932      1.864     -0.318      0.750      -4.246       3.060
+        ==============================================================================
+        Omnibus:                       37.685   Durbin-Watson:                   2.034
+        Prob(Omnibus):                  0.000   Jarque-Bera (JB):              508.086
+        Skew:                           0.237   Prob(JB):                    4.68e-111
+        Kurtosis:                      12.065   Cond. No.                         236.
+        ==============================================================================
+
+        Notes:
+        [1] Standard Errors are heteroscedasticity robust (HC3)
+
+  - First-difference model
+
+                                  OLS Regression Results                                    
+        ===============================================================================================
+        Dep. Variable:     logDiffAnnual_CO2_emissions_TperCap   R-squared:                       0.405
+        Model:                                             OLS   Adj. R-squared:                  0.384
+        Method:                                  Least Squares   F-statistic:                     1324.
+        Date:                                 Thu, 15 Sep 2022   Prob (F-statistic):          5.97e-116
+        Time:                                         20:52:03   Log-Likelihood:                 110.39
+        No. Observations:                                  146   AIC:                            -208.8
+        Df Residuals:                                      140   BIC:                            -190.9
+        Df Model:                                            5                                         
+        Covariance Type:                                   HC3                                         
+        =====================================================================================
+        coef    std err          z      P>|z|      [0.025      0.975]
+        -------------------------------------------------------------------------------------
+        const                 0.0045      0.015      0.302      0.762      -0.024       0.033
+        logDiffGDP_perCap     1.0361      0.266      3.895      0.000       0.515       1.557
+        lag1_DiffCO2          0.0713      0.132      0.541      0.589      -0.187       0.330
+        lag2_DiffCO2         -0.0992      0.074     -1.334      0.182      -0.245       0.047
+        dummy1875             0.8397      0.052     16.283      0.000       0.739       0.941
+        dummy1877            -0.5087      0.503     -1.012      0.312      -1.494       0.477
+        ==============================================================================
+        Omnibus:                       37.323   Durbin-Watson:                   2.311
+        Prob(Omnibus):                  0.000   Jarque-Bera (JB):              546.889
+        Skew:                           0.135   Prob(JB):                    1.76e-119
+        Kurtosis:                      12.478   Cond. No.                         25.2
+        ==============================================================================
+
+        Notes:
+        [1] Standard Errors are heteroscedasticity robust (HC3)
+
+
+
 
 - Time-series models:
   - AR
