@@ -4,9 +4,37 @@ Hi! My applied econometrics exam of the last semester consisted in a time series
 
 - Summary statistics & visualizations:
 
-<img width="527" alt="Screenshot 2022-09-09 at 15 56 48" src="https://user-images.githubusercontent.com/103948003/189366946-644b40bc-6dcb-49c3-bce3-fc3a58d74fd4.png">
+GDP_perCap  logGDP_perCap  logDiffGDP_perCap
+count    149.000000     149.000000         148.000000
+mean    7938.705366       8.452257           0.019299
+std     8295.177506       1.010704           0.040228
+min     1486.000000       7.303843          -0.114410
+25%     1962.000000       7.581720          -0.004474
+50%     2879.000000       7.965198           0.020095
+75%    12894.000000       9.464517           0.042307
+max    27035.599610      10.204910           0.149593
 
-<img width="679" alt="Screenshot 2022-09-09 at 15 57 07" src="https://user-images.githubusercontent.com/103948003/189367008-b421fe94-7fde-46a9-b448-00705f64c6f4.png">
+
+Annual_CO2_emissions_TperCap  logAnnual_CO2_emissions_TperCap  \
+count                    149.000000                       149.000000   
+mean                       1.774626                        -0.115513   
+std                        2.005871                         1.271783   
+min                        0.005100                        -5.278515   
+25%                        0.407600                        -0.897469   
+50%                        0.633000                        -0.457285   
+75%                        2.745700                         1.010036   
+max                        6.715700                         1.904448   
+
+logDiffAnnual_CO2_emissions_TperCap  
+count                           148.000000  
+mean                              0.046568  
+std                               0.263543  
+min                              -0.593225  
+25%                              -0.033819  
+50%                               0.027173  
+75%                               0.085629  
+max                               2.649210  
+
 
 We can see  that the growth rates (first difference of the log variables, bottom right corner) become stationary in comparison with the other variables forms, as deducible from the following time series plots:
 
@@ -20,7 +48,7 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
 - Regressions:
   - Linear model:
-  
+
                                           OLS Regression Results                                 
         ========================================================================================
         Dep. Variable:     Annual_CO2_emissions_TperCap   R-squared:                       0.995
