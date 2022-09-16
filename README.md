@@ -157,7 +157,8 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
   - **First-difference model**
 
-                                  OLS Regression Results                                    
+                                OLS Regression Results
+
         ===============================================================================================
         Dep. Variable:     logDiffAnnual_CO2_emissions_TperCap   R-squared:                       0.405
         Model:                                             OLS   Adj. R-squared:                  0.384
