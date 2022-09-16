@@ -192,8 +192,8 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
 
 - **_Time-series models_**:
-  - AR
-  - MA
-  - ARMA
+  - *AR*
+  - *MA*
+  - *ARMA*
 
 :)
