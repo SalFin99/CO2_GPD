@@ -2,7 +2,7 @@
 
 Hi! My applied econometrics exam of the last semester consisted in a time series analysis of the relation between CO2 emisssions and GDP per capita, trying to assess if the Cuznek Curve is present and which model best suits the data. The guidelines of the project required Gretl, but I am now personally writing some part of it in Python. As the assessment of the best model for every functional form has already been carried out, i will only code the models which were choosen for every form.
 
-- Summary statistics & visualizations:
+- **_Summary statistics & visualizations:_**
 
           GDP_perCap  logGDP_perCap  logDiffGDP_perCap
           count    149.000000     149.000000         148.000000
@@ -46,8 +46,8 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
 <img width="454" alt="Screenshot 2022-09-10 at 14 56 15" src="https://user-images.githubusercontent.com/103948003/189484401-8f7e2191-419a-4d50-8f45-612eb002b101.png">
 
-- Regressions:
-  - Linear model:
+- **_Regressions_**:
+  - **Linear model**:
 
                                           OLS Regression Results                               
         ========================================================================================
@@ -83,7 +83,7 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
 
 
 
-  - Nonlinear model
+  - **Nonlinear model**
 
                                     OLS Regression Results                                 
         ========================================================================================
@@ -118,7 +118,7 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
       This model has a very good adjusted R squared value of more than 99%,  also the squared GDP variable is now significant and some of tests can be accepted. Indeed, autocorrelation is not present anymore and we have stability in the parameters’ coefficient
 
 
-  - Logarithmic model
+  - **Logarithmic model**
 
       To adjust this model, we robustified our standard errors and we introduced three significant dummies (1872, 1874, 1878) and a lag of the dependent variable. The dummies can be explained mentioning the golpe of Saldanha Oliveira, in 1870, which was followed by a period of major political turmoil and financial difficulties
 
@@ -155,7 +155,7 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
       As we can assess by looking at the coefficients, an increase of one percent in GDP per capita produces a 0.184% increase in CO2 emissions per capita. The dummies are all significant, showing a larger positive impact for the year 1872 and negative impacts for 1874 and 1877. The adjusted R-squared and F-tests confirms that the model is well performing.
 
 
-  - First-difference model
+  - **First-difference model**
 
                                   OLS Regression Results                                    
         ===============================================================================================
@@ -191,10 +191,7 @@ The following graph shows a basic representation of GDP vs CO2 emissions:
       The interpretation of this model suggest that a 1% increase in the growth rate of GDP per capita produces a 1.03% increase in the growth rate of CO2 emissions per capita. The adjusted R-square is not particularly high, as it is not able to explain approximately 62% of variation in the growth rate of CO2 emissions per capita.
 
 
-
-
-
-- Time-series models:
+- **_Time-series models_**:
   - AR
   - MA
   - ARMA
