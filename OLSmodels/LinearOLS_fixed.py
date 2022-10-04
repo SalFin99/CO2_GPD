@@ -9,6 +9,7 @@ data = loadAll() #just returns the database
 data['GDP_lag1'] = data['GDP_perCap'].shift(1) #lag column for GDP variable
 data['CO2_lag1'] = data['Annual_CO2_emissions_TperCap'].shift(1) #lag column for co2 variable
 
+
 y=data[['Annual_CO2_emissions_TperCap']] #dependent variable
 
 x=data[['GDP_perCap', 'GDP_lag1', 'CO2_lag1']] #regressors
@@ -26,7 +27,9 @@ x=sm.add_constant(x)
 
 reg_ols = sm.OLS(y, x.astype(float), missing='drop').fit(cov_type='HC3')
 
-
-print(reg_ols.summary())
+#print(reg_ols.summary())
+cusumTest(reg_ols.resid)
 #normalityTest(reg_ols)
 #LMtestAutocorrelation(reg_ols)
+#ramseyResetTest(reg_ols)
+#whiteTest(reg_ols)
